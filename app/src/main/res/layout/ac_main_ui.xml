@@ -1,0 +1,84 @@
+<com.se7entina.app.view.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainUIActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_ui_fg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="90%h"
+         />
+
+    <com.se7entina.app.view.percent.PercentRelativeLayout
+        android:id="@+id/rl_main_ui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <RadioGroup
+            android:id="@+id/rg_main_ui"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_heightPercent="9.6%h">
+
+            <RadioButton
+                android:id="@+id/main_radioButton1"
+                style="@style/MainUI_RadioButton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="true"
+                android:drawableTop="@drawable/main_radiobutton2_image"
+                android:text="家教列表"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#EFEFEF" />
+
+            <RadioButton
+                android:id="@+id/main_radioButton2"
+                style="@style/MainUI_RadioButton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/main_radiobutton1_image"
+                android:text="我的"
+                android:textSize="12dp" />
+        </RadioGroup>
+
+
+        <View
+            android:id="@+id/v_main"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_line"
+            app:layout_marginBottomPercent="9.6%h" />
+
+        <ImageButton
+            android:id="@+id/ib_class_info"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/class_info"
+            app:layout_heightPercent="12%h"
+            app:layout_marginBottomPercent="1.5%h"
+            app:layout_widthPercent="12%h" />
+    </com.se7entina.app.view.percent.PercentRelativeLayout>
+
+
+
+
+</com.se7entina.app.view.percent.PercentRelativeLayout>
