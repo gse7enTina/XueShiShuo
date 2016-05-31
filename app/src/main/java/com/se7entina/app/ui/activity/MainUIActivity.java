@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import com.se7entina.app.App;
 import com.se7entina.app.R;
 import com.se7entina.app.ui.fragment.ClassListFragment;
+import com.se7entina.app.ui.fragment.PersonalInfoFragment;
 import com.se7entina.app.widgets.GestureListener;
 
 import java.util.HashMap;
@@ -52,22 +53,22 @@ public class MainUIActivity extends FragmentActivity implements RadioGroup.OnChe
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-//        if (R.id.main_radioButton1 == checkedId) {
-//            fragment = map.get(ClassListFragment.class.getName());
-//        } else if (R.id.main_radioButton2 == checkedId) {
-//            fragment = map.get(RegFragment.class.getName());
-//        }
-//        if (fragment == null) {
-//            if (R.id.main_radioButton1 == checkedId) {
-//                fragment = new ClassListFragment();
-//                map.put(ClassListFragment.class.getName(), fragment);
-//            } else if (R.id.main_radioButton2 == checkedId) {
-//                fragment = new RegFragment();
-//                map.put(RegFragment.class.getName(), fragment);
-//            }
-//        }
-//        getSupportFragmentManager()
-//                .beginTransaction().replace(R.id.main_fg, fragment).commit();
+        if (R.id.main_radioButton1 == checkedId) {
+            fragment = map.get(ClassListFragment.class.getName());
+        } else if (R.id.main_radioButton2 == checkedId) {
+            fragment = map.get(PersonalInfoFragment.class.getName());
+        }
+        if (fragment == null) {
+            if (R.id.main_radioButton1 == checkedId) {
+                fragment = new ClassListFragment();
+                map.put(ClassListFragment.class.getName(), fragment);
+            } else if (R.id.main_radioButton2 == checkedId) {
+                fragment = new PersonalInfoFragment();
+                map.put(PersonalInfoFragment.class.getName(), fragment);
+            }
+        }
+        getSupportFragmentManager()
+                .beginTransaction().replace(R.id.main_ui_fg, fragment).commit();
     }
 
     private class LoginGestureListener extends GestureListener {

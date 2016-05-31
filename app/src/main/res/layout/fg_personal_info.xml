@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.se7entina.app.view.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.se7entina.app.view.percent.PercentRelativeLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/rl_person_info"
+        app:layout_heightPercent ="30%"
+        android:background="@color/helloBg">
 
+        <ImageView
+            android:src="@mipmap/person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="20%h"
+            app:layout_marginLeftPercent="10%w"
+            />
+        <TextView
+            android:id="@+id/tv_user"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户："
+            app:layout_marginTopPercent="20%h"
+            app:layout_marginLeftPercent="35%w"/>
+
+        <TextView android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="186****2511"
+            app:layout_marginTopPercent="20%h"
+            android:layout_toRightOf="@+id/tv_user"/>
+
+        <TextView
+            android:id="@+id/tv_complete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="资料完善度："
+            android:layout_below="@id/tv_user"
+            app:layout_marginTopPercent="10%h"
+            app:layout_marginLeftPercent="35%w"/>
+
+        <TextView android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:layout_below="@id/tv_user"
+            app:layout_marginTopPercent="10%h"
+            android:layout_toRightOf="@+id/tv_complete"/>
+    </com.se7entina.app.view.percent.PercentRelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_item"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@null"
+        android:layout_below="@id/rl_person_info"/>
 </com.se7entina.app.view.percent.PercentRelativeLayout>
