@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import com.se7entina.app.App;
 import com.se7entina.app.R;
 import com.se7entina.app.ui.fragment.ClassListFragment;
+import com.se7entina.app.widgets.GestureListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,29 +36,22 @@ public class MainUIActivity extends FragmentActivity implements RadioGroup.OnChe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_main_ui);
         App.getInstance().addActivity(this);
-//        ClassListFragment fragment = new ClassListFragment();
-//        map.put(ClassListFragment.class.getName(), fragment);
-//        getSupportFragmentManager().beginTransaction().add(R.id.main_ui_fg, fragment).commit();
-//        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.rg_main_ui);
-//        radioGroup.setOnCheckedChangeListener(this);
-//        rbList = (RadioButton) findViewById(R.id.main_radioButton1);
-//        rbMy = (RadioButton) findViewById(R.id.main_radioButton2);
-//
-//        rlMainFg = (RelativeLayout) findViewById(R.id.main_ui_fg);
-//        rlMainFg.setLongClickable(true);
-//        rlMainFg.setOnTouchListener(new LoginGestureListener(this));
-//        Intent intent = getIntent();
-//        if (intent != null) {
-//            String toUrl = intent.getStringExtra(SystemConstant.LOGINED_TO_URL);
-//            if (toUrl != null && toUrl.length() > 0) {
-//                SharedPreferencesUtil.putString(this, SystemConstant.LOGINED_TO_URL, toUrl);
-//            }
-//        }
+        ClassListFragment fragment = new ClassListFragment();
+        map.put(ClassListFragment.class.getName(), fragment);
+        getSupportFragmentManager().beginTransaction().add(R.id.main_ui_fg, fragment).commit();
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.rg_main_ui);
+        radioGroup.setOnCheckedChangeListener(this);
+        rbList = (RadioButton) findViewById(R.id.main_radioButton1);
+        rbMy = (RadioButton) findViewById(R.id.main_radioButton2);
+
+        rlMainFg = (RelativeLayout) findViewById(R.id.main_ui_fg);
+        rlMainFg.setLongClickable(true);
+        rlMainFg.setOnTouchListener(new LoginGestureListener(this));
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-//
+
 //        if (R.id.main_radioButton1 == checkedId) {
 //            fragment = map.get(ClassListFragment.class.getName());
 //        } else if (R.id.main_radioButton2 == checkedId) {
@@ -76,35 +70,35 @@ public class MainUIActivity extends FragmentActivity implements RadioGroup.OnChe
 //                .beginTransaction().replace(R.id.main_fg, fragment).commit();
     }
 
-//    private class LoginGestureListener extends GestureListener {
-//        public LoginGestureListener(Context context) {
-//            super(context);
-//        }
-//
-//        @Override
-//        public boolean left() {
-//            rbMy.setChecked(false);
-//            rbList.setChecked(true);
-//            return super.left();
-//        }
-//
-//        @Override
-//        public boolean right() {
-//            rbMy.setChecked(true);
-//            rbList.setChecked(false);
-//            return super.right();
-//        }
-//    }
-//
-//
-//    @Override
-//    protected void onPause() {
-//        if (dlg != null) {
-//            dlg.dismiss();
-//        }
-//        super.onPause();
-//    }
-//
+    private class LoginGestureListener extends GestureListener {
+        public LoginGestureListener(Context context) {
+            super(context);
+        }
+
+        @Override
+        public boolean left() {
+            rbMy.setChecked(false);
+            rbList.setChecked(true);
+            return super.left();
+        }
+
+        @Override
+        public boolean right() {
+            rbMy.setChecked(true);
+            rbList.setChecked(false);
+            return super.right();
+        }
+    }
+
+
+    @Override
+    protected void onPause() {
+        if (dlg != null) {
+            dlg.dismiss();
+        }
+        super.onPause();
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
