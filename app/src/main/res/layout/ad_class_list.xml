@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_sex_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/man"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_sex_img"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black_font_color"
+        android:text="刘明哲"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/class_1"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:background="@mipmap/class_info_math"
+        android:text="数学"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_below="@id/tv_name"
+        android:layout_alignRight="@id/tv_name"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:background="@mipmap/class_info_en"
+        android:text="英语"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_below="@id/tv_name"
+        android:layout_toRightOf="@id/class_1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_sex"
+        android:src="@mipmap/manimg"
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_name"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black_font_color"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="18dp"
+        android:text="30-50元/小时"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/star"
+        android:layout_below="@id/tv_price"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/tv_price"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="人气: 15"
+        android:textSize="7dp"
+        android:layout_marginTop="2dp"
+        android:layout_alignLeft="@id/iv_icon"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_marginLeft="15dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/iv_sex_img"/>
+
+</RelativeLayout>

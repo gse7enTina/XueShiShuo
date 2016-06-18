@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.se7entina.app">
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+    <activity
+        android:name=".ui.activity.HelloActivity"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name=".ui.activity.GuidePageActivity"
+        android:screenOrientation="portrait" />
+
+    <activity
+        android:name=".ui.activity.MainUIActivity"
+        android:screenOrientation="portrait" />
+    </application>
+</manifest>

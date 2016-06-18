@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.se7entina.app.view.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#FCFCFC"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_fenlei"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_fenlei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/bottom_iantou"
+                android:text="筛选家教" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@color/Grey_BianKuang_DF" />
+
+        <LinearLayout
+            android:id="@+id/ll_tiaojian"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/bottom_iantou"
+                android:text="默认排序" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.se7entina.app.view.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rotate_header_list_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_title"
+        android:background="#f1f1f1"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <ListView
+            android:id="@+id/rotate_header_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="#dcded7"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:paddingLeft="12dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none" />
+
+    </com.se7entina.app.view.ptr.PtrClassicFrameLayout>
+
+</com.se7entina.app.view.percent.PercentRelativeLayout>
