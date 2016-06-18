@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.se7entina.app.view.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8FC5CF">
+
+
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/normal_text_size" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="back"
+        android:src="@mipmap/nav_icon_back_3"
+        app:layout_heightPercent="7.5%w"
+        app:layout_marginLeftPercent="4.3%"
+        app:layout_marginPercent="2.1%w"
+        app:layout_widthPercent="7.5%w" />
+
+
+    <ImageView
+        android:id="@+id/iv_click"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_heightPercent="7.5%w"
+        app:layout_marginLeftPercent="4.3%"
+        app:layout_marginPercent="2.1%w"
+        app:layout_marginRightPercent="4.3%" />
+
+
+</com.se7entina.app.view.percent.PercentRelativeLayout>

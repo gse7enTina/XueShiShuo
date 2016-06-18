@@ -14,8 +14,11 @@ public abstract class BaseFragment extends Fragment {
 
     private View rootView;
 
+    protected LayoutInflater layoutInflater;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        layoutInflater = getLayoutInflater(savedInstanceState);
 
         if (rootView == null) {
             rootView = inflater.inflate(getLayoutId(), null);
@@ -30,6 +33,7 @@ public abstract class BaseFragment extends Fragment {
             ButterKnife.inject(this, rootView);
             onAgain(rootView);
         }
+
 
         return rootView;
     }

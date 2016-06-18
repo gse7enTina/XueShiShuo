@@ -10,4 +10,15 @@
     <color name="grey_font_color">#959595</color>
     <color name="colorNormal">#6C52BB</color>
     <color name="pro_detail">#f5f5f5</color>
+    <color name="gray">#cccccc</color>
+    <color name="line">#e5e5e5</color>
+    <color name="drop_down_selected">#7B1FA2</color>
+    <color name="drop_down_unselected">#111111</color>
+    <color name="Gray_E5">#E5E5E5</color>
+    <color name="Grey_TXT_84">#84807E</color>
+    <color name="BLACK">#000000</color>
+    <color name="mask_color">#88888888</color>
+    <color name="check_bg">#f2f2f2</color>
+    <color name="un_press_color">#9C27B0</color>
+    <color name="Grey_BianKuang_DF">#DFDFDF</color>
 </resources>

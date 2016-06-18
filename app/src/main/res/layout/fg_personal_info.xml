@@ -63,6 +63,9 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:listSelector="@null"
+        android:divider="#dcded7"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
         android:layout_below="@id/rl_person_info"/>
 </com.se7entina.app.view.percent.PercentRelativeLayout>

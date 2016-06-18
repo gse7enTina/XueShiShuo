@@ -9,4 +9,6 @@
     <string name="cube_ptr_refreshing">加载中...</string>
     <string name="cube_ptr_release_to_refresh">释放刷新</string>
     <string name="cube_ptr_seconds_ago"> 秒之前</string>
+    <string name="settings_error_market">无法打开应用市场</string>
+    <string name="tips_strings">提示</string>
 </resources>

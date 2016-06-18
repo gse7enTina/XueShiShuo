@@ -27,10 +27,12 @@ public class ClassListAdapter extends GeneralAdapter<List<ClassBean>, ClassBean>
     public int[] getIds() {
 
         return new int[]{
-                R.id.adapter_query_trans_txnRst,
-                R.id.adapter_query_trans_date,
-                R.id.adapter_query_trans_res,
-                R.id.adapter_query_trans_button,
+                R.id.iv_sex_img,
+                R.id.tv_name,
+                R.id.iv_sex,
+                R.id.tv_price,
+                R.id.iv_icon,
+                R.id.tv_per
         };
     }
 

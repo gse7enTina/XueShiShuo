@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.se7entina.app.App;
 import com.se7entina.app.R;
@@ -18,6 +21,9 @@ import com.se7entina.app.widgets.GestureListener;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 /**
  * Class:
@@ -32,10 +38,17 @@ public class MainUIActivity extends FragmentActivity implements RadioGroup.OnChe
     private RadioButton rbMy, rbList;
     public Dialog dlg;
 
+    @InjectView(R.id.iv_back)
+    ImageView ivBack;
+
+    @InjectView(R.id.tv_head)
+    TextView tvHead;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_main_ui);
+        ButterKnife.inject(this);
         App.getInstance().addActivity(this);
         ClassListFragment fragment = new ClassListFragment();
         map.put(ClassListFragment.class.getName(), fragment);
@@ -48,6 +61,10 @@ public class MainUIActivity extends FragmentActivity implements RadioGroup.OnChe
         rlMainFg = (RelativeLayout) findViewById(R.id.main_ui_fg);
         rlMainFg.setLongClickable(true);
         rlMainFg.setOnTouchListener(new LoginGestureListener(this));
+        tvHead.setText("家教列表");
+        ivBack.setVisibility(View.GONE);
+
+
     }
 
     @Override
@@ -55,8 +72,10 @@ public class MainUIActivity extends FragmentActivity implements RadioGroup.OnChe
 
         if (R.id.main_radioButton1 == checkedId) {
             fragment = map.get(ClassListFragment.class.getName());
+            tvHead.setText("家教列表");
         } else if (R.id.main_radioButton2 == checkedId) {
             fragment = map.get(PersonalInfoFragment.class.getName());
+            tvHead.setText("个人中心");
         }
         if (fragment == null) {
             if (R.id.main_radioButton1 == checkedId) {
@@ -104,4 +123,5 @@ public class MainUIActivity extends FragmentActivity implements RadioGroup.OnChe
     protected void onDestroy() {
         super.onDestroy();
     }
+
 }

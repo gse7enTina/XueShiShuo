@@ -30,14 +30,6 @@ public class ClassListShowDataView implements ShowDataView<ClassBean> {
 
     @Override
     public void showDataView(View v, ClassBean data, int position) {
-        TextView textView = (TextView) v.getTag(R.id.adapter_query_trans_txnRst);
-        textView.setText(data.getName());
-        textView = (TextView) v.getTag(R.id.adapter_query_trans_date);
-        textView.setText(data.getSex());
-        textView = (TextView) v.getTag(R.id.adapter_query_trans_res);
-        textView.setText(data.getEducation());
-        textView = (TextView) v.getTag(R.id.adapter_query_trans_button);
-        textView.setText(data.getGrade());
     }
 
 }

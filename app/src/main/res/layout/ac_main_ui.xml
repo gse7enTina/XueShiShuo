@@ -6,11 +6,20 @@
     android:orientation="vertical"
     tools:context=".ui.activity.MainUIActivity">
 
-    <RelativeLayout
-        android:id="@+id/main_ui_fg"
+    <include
+        android:id="@+id/ly_head"
+        layout="@layout/head"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_heightPercent="90%h"
+        app:layout_heightPercent="7%h"
+        />
+
+    <RelativeLayout
+        android:id="@+id/main_ui_fg"
+        android:layout_below="@id/ly_head"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="83%h"
          />
 
     <com.se7entina.app.view.percent.PercentRelativeLayout
